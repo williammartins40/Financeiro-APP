@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+    <title>Financeiro APP</title>
+</head>
+
+<body>
+
+    <div class="gtco-loader"></div>
+	
+	<div id="page">
+
+	
+	<div class="page-inner">
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			
+			<div class="row">
+
+				<div class="col-sm-4 col-xs-12">
+
+					<div id="gtco-logo"><a href="index.html">Financeiro APP<em>.</em></a></div>	
+
+				</div>
+
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="index.html">Início</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	
+	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(images/img_4.jpg)">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+					
+
+					<div class="row row-mt-15em">
+						
+						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap">
+								<div class="tab">
+									<ul class="tab-menu">
+										<li class="active gtco-first"><a href="#" data-tab="tab_price">Price</a></li>
+										<li class="gtco-second"><a href="#" data-tab="id_sac">Sac</a></li>
+										
+									</ul>
+									<div class="tab-content">
+
+<!--Operação Price -->
+
+										<div class="tab-content-inner active" data-content="tab_price">
+											<form name="calcformPrice" method="post" action="">
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1"> Valor do Empréstimo</label>
+														<input type="text" name="capital" id="capital" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Número de parcelas</label>
+														<input type="text" name="parcelas" id="parcelas" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Taxa de juros (% ao mês)</label>
+														<input type="text" name="taxa" id="taxa" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Números da parcela (T)</label>
+														<input type="text" name="periodo" id="periodo" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Periodo K</label>
+														<input type="text" name="periodok" id="periodok" />
+													</div>
+												</div>
+
+								<div class="row form-group">
+													<div class="col-md-12">
+														<input type="button" class="btn_price" value="Calcular" onClick="calcularPrice()"/> <!--Botão Para Calcular Price -->
+													</div>
+												</div>
+							    <div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Valor da Parcela</label>
+														<input type="text" name="valorparcela" id="valorparcela" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Saldo Devedor de Ordem T</label>
+														<input type="text" name="saldodevedort" id="saldodevedort" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Saldo Devedor de Ordem T - 1</label>
+														<input type="text" name="saldodevedort1" id="saldodevedort1" />	
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Juros de Ordem T</label>
+														<input type="text" name="jurosordemt" id="jurosordemt" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Valor da Primeira amortização</label>
+														<input type="text" name="primeiraamortizacao" id="primeiraamortizacao" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Valor da amortização de Ordem T</label>
+														<input type="text" name="amortizacaot" id="amortizacaot" />
+													</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Valor das amotizações acumuladas até o periodo T</label>
+														<input type="text" name="amortizacaott" id="amortizacaott" />
+													</div>
+												</div>
+												
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Amortização entre o periodo T e T+K</label>
+														<input type="text" name="amortizacaott2" id="amortizacaott2" />
+													</div>
+												</div>
+												
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Juros acumulado até periodo T</label>
+														<input type="text" name="jurosacum" id="jurosacum" />
+													</div>
+												</div>
+												
+												
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res">Juros acumulado entre o periodo T e T+K</label>
+														<input type="text" name="jurosacum2" id="jurosacum2" />
+													</div>
+												</div>
+
+											</form>	
+
+										        </div>
+								               </div>
+						
+
+<!--Operação SAC -->				
+						<div class="tab-content-inner" data-content="id_sac">
+						<form name="calcformSac" method="post" action="">
+
+						     <div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Valor do Empréstimo</label>
+														<input type="text" name="capital" id="capital" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Número de parcelas</label>
+														<input type="text" name="parcelas" id="parcelas" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Número da Prestação (T)</label>
+														<input type="text" name="periodo" id="periodo" />
+													</div>
+												</div>
+                                                <div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Taxa de juros (% ao mês)</label>
+														<input type="text" name="taxa" id="taxa" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="valor1">Periodo K</label>
+														<input type="text" name="periodok" id="periodok" />	
+													</div>
+												</div>
+
+												
+								<div class="row form-group">
+													<div class="col-md-12">
+														<input type="button" class="btn_sac" value="Calcular" onClick="calcularSac()"/>
+													</div>
+								</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">Valor da amortização</label>
+														<input type="text" name="valoramortizacao" id="valoramortizacao" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">valor Saldo Devedor de Ordem T</label>
+														<input type="text" name="saldodevedort" id="saldodevedort" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">valor Saldo Devedor de Ordem T - 1</label>
+														<input type="text" name="saldodevedortum" id="saldodevedortum" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">valor da parcela de Juros de Ordem T</label>
+														<input type="text" name="parcelajurosordemt" id="parcelajurosordemt" />	
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">Valor Da Prestação De Ordem T </label>
+														<input type="text" name="prestacaoordemt" id="prestacaoordemt" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">Soma Das Amortizações De Ordem T + K</label>
+														<input type="text" name="amortizacaotk" id="amortizacaotk" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">Soma Dos Juros De Ordem T</label>
+														<input type="text" name="somajurost" id="somajurost" />	
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">Soma Dos Juros De Ordem T+K </label>
+														<input type="text" name="somajurostk" id="somajurostk" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+													<label for="res02">Soma Das Prestações Acumuladas De Ordem T</label>
+														<input type="text" name="somaprestacaoa" id="somaprestacaoa" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">Soma Das Prestações De Ordem T+K</label>
+														<input type="text" name="somaprestacaotk" id="somaprestacaotk" />
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="res02">Decréscimo Nas Prestações</label>
+														<input type="text" name="decrescimo" id="decrescimo" />	
+													</div>
+												</div>
+
+											</form>	
+
+										</div>
+
+											</form>	
+										</div>
+
+									</div>
+
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+							
+					
+				</div>
+			</div>
+			</div>
+		</div>
+	
+	
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+    <!-- <script type="text/javascript" src="cordova.js"></script>  -->
+    <script type="text/javascript" src="js/price.js"></script>
+    <script type="text/javascript" src="js/sac.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+     app.initialize();
+    </script>
+</body>
+
+</html>
